@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "berryfix",
+  "version": "${version}",
+  "name": "Berry Fix",
+  "description": "Makes food always be edible if you're missing hunger. Never accidentally spam berry bushes again :D",
+  "authors": [
+    "Adi"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "Insert License Here",
+  "icon": "assets/berryfix/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.frankiebtw.berryfix.fabric.BerryFixFabric"
+    ]
+  },
+  "mixins": [
+    "berryfix.mixins.json",
+    "berryfix-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.20.1",
+    "architectury": ">=9.1.12"
+  }
+}
