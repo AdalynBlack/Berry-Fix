@@ -1,4 +1,4 @@
-package com.frankiebtw.berryfix.fabriclike;
+package com.frankiebtw.berryfix.fabric;
 
 import net.minecraft.client.KeyMapping;
 

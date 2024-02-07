@@ -1,7 +1,6 @@
 package com.frankiebtw.berryfix.fabric;
 
 import com.frankiebtw.berryfix.BerryFix;
-import com.frankiebtw.berryfix.fabriclike.Keybinds;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 
