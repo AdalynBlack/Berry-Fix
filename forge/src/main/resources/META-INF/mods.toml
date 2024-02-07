@@ -7,6 +7,7 @@ license = "Insert License Here"
 modId = "berryfix"
 version = "${version}"
 displayName = "Berry Fix"
+logoFile="logo.png"
 authors = "Adi"
 description = '''
 Makes food always be edible if you're missing hunger. Never accidentally spam berry bushes again :D
