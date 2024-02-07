@@ -8,8 +8,8 @@
     "Adi"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://legacy.curseforge.com/minecraft/mc-mods/berry-fix",
+    "sources": "https://github.com/TonyGamer/Berry-Fix"
   },
   "license": "GPL-3.0",
   "icon": "logo.png",
