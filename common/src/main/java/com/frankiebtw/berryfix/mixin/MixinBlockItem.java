@@ -1,6 +1,5 @@
 package com.frankiebtw.berryfix.mixin;
 
-import com.frankiebtw.berryfix.BerryFixExpectPlatform;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -20,8 +19,12 @@ public abstract class MixinBlockItem extends Item {
             method = "useOn",
             cancellable = true)
     public void useOn$MixinBlockItem(UseOnContext useOnContext, CallbackInfoReturnable<InteractionResult> cir) {
+        // Ensure player is not null
+        if(useOnContext.getPlayer() == null)
+            return;
+
         // Don't do any checks if the override is held. This should restore vanilla functionality
-        if(BerryFixExpectPlatform.isOverrideHeld())
+        if(useOnContext.getPlayer().isCrouching())
             return;
 
         // If the player is invulnerable (likely from being in creative or spectator mode) restore vanilla behavior
@@ -29,6 +32,8 @@ public abstract class MixinBlockItem extends Item {
             return;
 
         // Check the dedicated "canEat" function to see if the food is edible at the current moment
+        if(this.getFoodProperties() == null)
+            return;
         if(!useOnContext.getPlayer().canEat(this.getFoodProperties().canAlwaysEat()))
             return;
 
